@@ -1,0 +1,44 @@
+body {
+	background-color: #272822;
+	color: #aaa;
+}
+
+p, span {
+	font-family: monospace;
+	white-space: pre;
+	text-align: center;
+}
+
+@keyframes wow-fade {
+	0%   { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+.wow {
+	position: absolute;
+	font-size: 1.5em;
+	display: none;
+}
+
+.wow.show {
+	display: block;
+}
+
+#wow-1 {
+	top: 5em;
+	left: 10em;
+	animation: wow-fade 3s infinite;
+}
+
+#wow-2 {
+	top: 12em;
+	right: 8em;
+	animation: wow-fade 4s infinite;
+}
+
+#wow-3 {
+	top: 25em;
+	left: 60px;
+	animation: wow-fade 5s infinite;
+}

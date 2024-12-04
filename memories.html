@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        #customize
+        {
+            text-align: center;
+
+        }
+
+
+        h1 {
+            margin-top: 20px;
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: float 3s ease-in-out infinite;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .nav-links a {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .nav-links a:hover {
+            background-color: #e65550;
+        }
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .balloon {
+            width: 50px;
+            height: 80px;
+            background: radial-gradient(circle, #ff9a9e, #fad0c4);
+            border-radius: 50%;
+            animation: balloonFloat 10s ease-in-out infinite;
+            position: absolute;
+        }
+        .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .balloon:nth-child(2) { left: 30%; animation-delay: 2s; }
+        .balloon:nth-child(3) { left: 50%; animation-delay: 4s; }
+        .balloon:nth-child(4) { left: 70%; animation-delay: 6s; }
+        .balloon:nth-child(5) { left: 90%; animation-delay: 8s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes balloonFloat {
+            0% { transform: translateY(100vh); }
+            100% { transform: translateY(-10vh); }
+        }
+    </style>
+</head>
+<body>
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <h1>Memories</h1>
+    <p>Here are some beautiful moments we've shared together.</p>
+    <div class="gallery">
+        <img src="./src/img/g1.jpg" alt="Memory 1" id = "customize">
+        <img src="./src/img/g2.jpg" alt="Memory 2">
+        <img src="./src/img/g6.jpg" alt="Memory 3">
+        <img src="./src/img/mul.png" alt="Memory 4">
+        <img src="./src/img/g5.jpg" alt="Memory 5">
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gifts.html">Gift Reveal</a>
+        <a href="games.html">Fun & Games</a>
+        <a href="dedication.html">Dedication</a>
+        <a href="wishes.html">Wishes</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
