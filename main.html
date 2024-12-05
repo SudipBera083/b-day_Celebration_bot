@@ -8,6 +8,7 @@
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 
+    <link rel="stylesheet" href="./src/style/chat.css">
   <title>Happy Birthday</title>
 
   <style>
@@ -128,56 +129,27 @@
 </head>
 
 <body>
-  <!-- model -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="popup" hidden>
-    Launch demo modal
-  </button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-  >
-    <div class="modal-dialog" style="background-color: #ff6f61;">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Authentication</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="card-body" >
-            <h5 class="card-title" style=" color: red;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-              <path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.5 4.5 0 0 1 7.965 13a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242s1.46-.118 2.152-.242a27 27 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434m6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434"/>
-            </svg></h5>
-            <input class="form-control" type="text" placeholder="Enter your first name here..." id="name" required >
+    <div class="container chat-container">
+        <header class="chat-header">
+          <h2>Chat Room</h2>
+        </header>
+        <div class="chat-box">
+          <div class="message left">Hello Srijita, happy B'day !
             <br>
-            
-            <input class="form-control" type="date" placeholder="DOB" id="dob" required>
+            I am your Virtual assistant Sciana.
             <br>
-            
+            Let's make this day special.
           </div>
+          <div class="message left">How are you feeling today ?</div>
+          <div class="message right">I am good! How about you?</div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="next">Next</button>
+        <div class="chat-input">
+          <input type="text" placeholder="Type your message..." />
+          <button>Send</button>
         </div>
       </div>
-    </div>
-  </div>
-
-
-
-  <div class="hero" id="main">
-
-
-    <h1>Happy Birthday, Srijita!</h1>
-    <p>Today we celebrate you, the most amazing person in my life.</p>
-    <div class="image-container">
-      <img src="./src/img/g4.jpg" alt="Her Image" />
-    </div>
-
+ 
 
     <div class="animation-container">
       <!-- Balloons -->
@@ -191,7 +163,7 @@
       <div class="heart" style="left: 45%; animation-delay: 1.5s"></div>
       <div class="heart" style="left: 75%; animation-delay: 2.5s"></div>
     </div>
-  </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

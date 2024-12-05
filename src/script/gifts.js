@@ -253,5 +253,10 @@
   })(jQuery);
   
   
+
+document.getElementById("wow-3").addEventListener("click",()=>{
+
+  window.location.href = "../main.html";
+})
   
   

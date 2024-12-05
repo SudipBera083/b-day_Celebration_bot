@@ -1,0 +1,124 @@
+
+#next
+{
+  float: right;
+}
+
+.card-body
+{
+  box-shadow: 10px 10px 10px #665a5a;
+}
+body {
+  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 15px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.btn-custom {
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.btn-custom:hover {
+  background-color: #e55b4d;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  animation: pulse 2s infinite;
+}
+
+.animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.balloon,
+.heart {
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  background-color: #ff6f61;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.heart {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  clip-path: polygon(
+    50% 0%,
+    100% 38%,
+    83% 100%,
+    50% 78%,
+    17% 100%,
+    0% 38%
+  );
+  background-color: #e55b4d;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+} 
