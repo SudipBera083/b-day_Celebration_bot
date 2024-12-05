@@ -14,18 +14,18 @@
   }
   
   .chat-container {
-    /* width: 400px; */
+    width: 400px;
     height: 600px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
   
   .chat-header {
-    background-color: #4a90e2;
+    background-color: #fba7aa;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -90,3 +90,8 @@
     background-color: #357abd;
   }
   
+
+  #cake{
+    width:70%;
+    height: auto;
+  }
