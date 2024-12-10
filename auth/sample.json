@@ -14,7 +14,7 @@
         "answer":[{
             "yes":"Awesome ! Check the gifs made for you." ,
             "no": "Looks you need more attractive things. Sudip always responsible to handle negative things. Let's check this.",
-            "url":"../templates/gifts.html"
+            "url":"../templates/gift.html"
     }]},
     
     {
