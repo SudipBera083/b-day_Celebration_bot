@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,126 +13,177 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 20px;
-            overflow-x: hidden;
+            overflow-x: hidden;   
         }
+        :root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
 
-        #customize
-        {
-            text-align: center;
+*{
+  
+            
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        }
+html{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
 
+body{
+  height: 100%;
+}
 
-        h1 {
-            margin-top: 20px;
-            font-size: 3rem;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 2s ease;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        .gallery img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: float 3s ease-in-out infinite;
-        }
-        .gallery img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-        .nav-links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        .nav-links a {
-            padding: 10px 20px;
-            background-color: #ff6f61;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .nav-links a:hover {
-            background-color: #e65550;
-        }
-        .balloons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        .balloon {
-            width: 50px;
-            height: 80px;
-            background: radial-gradient(circle, #ff9a9e, #fad0c4);
-            border-radius: 50%;
-            animation: balloonFloat 10s ease-in-out infinite;
-            position: absolute;
-        }
-        .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .balloon:nth-child(2) { left: 30%; animation-delay: 2s; }
-        .balloon:nth-child(3) { left: 50%; animation-delay: 4s; }
-        .balloon:nth-child(4) { left: 70%; animation-delay: 6s; }
-        .balloon:nth-child(5) { left: 90%; animation-delay: 8s; }
+.hero-section{
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
 
-        @keyframes balloonFloat {
-            0% { transform: translateY(100vh); }
-            100% { transform: translateY(-10vh); }
-        }
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card{
+  list-style: none;
+  position: relative;
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+
     </style>
 </head>
+
 <body>
-    <div class="balloons">
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-    </div>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <h1 style="
+    color: white; 
+    box-shadow: 5px 5px 5px grey;
+    background-color: #fad0c4;
+    " >Memories: The moments we hold onto, even when time slips away.</h1>
+    <p>Treasure the moments, they become memories to cherish.</p>
 
-    <h1>Memories</h1>
-    <p>Here are some beautiful moments we've shared together.</p>
-    <div class="gallery">
-        <img src="../src/img/g1.jpg" alt="Memory 1" id = "customize">
-        <img src="../src/img/g2.jpg" alt="Memory 2">
-        <img src="../src/img/g6.jpg" alt="Memory 3">
-        <img src="../src/img/mul.png" alt="Memory 4">
-        <img src="../src/img/g5.jpg" alt="Memory 5">
-    </div>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="gifts.html">Gift Reveal</a>
-        <a href="games.html">Fun & Games</a>
-        <a href="dedication.html">Dedication</a>
-        <a href="wishes.html">Wishes</a>
-    </div>
+<section class="hero-section">
+  <div class="card-grid">
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url('../src/img/g1.jpg')"></div>
+      <div class="card__content">
+        <p class="card__category">Travell</p>
+        <h3 class="card__heading">Mandarmoni Sea Beach</h3>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url('../src/img/g2.jpg')"></div>
+      <div class="card__content">
+        <p class="card__category">Dating</p>
+        <h3 class="card__heading">Romantic Date</h3>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url('../src/img/g5.jpg')"></div>
+      <div class="card__content">
+        <p class="card__category">Tradition</p>
+        <h3 class="card__heading">Swaraswati Puja</h3>
+      </div>
+    </li>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url('../src/img/g6.jpg')"></div>
+      <div class="card__content">
+        <p class="card__category">Celebration</p>
+        <h3 class="card__heading">Durga Puja</h3>
+      </div>
+    </a>
+  <div>
+</section>
+    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+        
 </body>
+
 </html>

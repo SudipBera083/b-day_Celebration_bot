@@ -1,44 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-	background-color: #272822;
-	color: #aaa;
+  width: 100%;
+/*   height: 100vh; */
 }
 
-p, span {
-	font-family: monospace;
-	white-space: pre;
-	text-align: center;
+#id1 img{
+  width: 100%;
+  height: 100vh;
 }
 
-@keyframes wow-fade {
-	0%   { opacity: 0; }
-	50% { opacity: 1; }
-	100% { opacity: 0; }
+#id2 img {
+  position: absolute;
+  top: 22%;
+  left: 7.8%;
+  width: 150px;
+  height: 140px;
+  border: 2px solid gray;
+  border-radius: 6%;
 }
 
-.wow {
-	position: absolute;
-	font-size: 1.5em;
-	display: none;
+#id3 {
+  position: absolute;
+  top: 49.5%;
+  left: 8%;
+  width: 160px;
+  height: 248px;
+/*   border: 3px solid gray; */
+  /*border-radius: 5px; */
 }
 
-.wow.show {
-	display: block;
+#id3 p{
+  /* color: #05fab8; */
+  color:  #c6e7c7;
+  font-size: 108%;
+  font-family: 'Nerko One', cursive;
 }
 
-#wow-1 {
-	top: 5em;
-	left: 10em;
-	animation: wow-fade 3s infinite;
+#gsamaaj{
+  position: absolute;
+  top: 81%;
+  left: 48%;
 }
 
-#wow-2 {
-	top: 12em;
-	right: 8em;
-	animation: wow-fade 4s infinite;
+#id4{
+  position: absolute;
+  top: 19%;
+  left: 38%;
+  width:300px;
+  height: 200px;
+  font-size: 380%;
+  transform: rotate(-6deg);
+}
+#id4 p{
+  font-family: 'Nerko One', cursive;
+  font-weight: bold;
+  text-align: center;
+/*   border: 2px solid black; */
 }
 
-#wow-3 {
-	top: 25em;
-	left: 60px;
-	animation: wow-fade 5s infinite;
+#id5{
+  position: absolute;
+  top: 88%;
+  right: 3%;
+}
+
+#id5 .play {
+  padding: 10px 18px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px #999;
+}
+
+.play:hover {background-color: #3e8e41}
+
+.play:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@media all and (min-width: 1350px) {
+  #id1 img {
+/*     width: 1350px; */
+    width: 100%;
+    height: 570px;
+  }
+  
+  #id2 img {
+    top: 18%;
+    left: 9.8%;
+    width: 165px;
+    height: 155px;
+    border: 2px solid gray;
+    border-radius: 6%;
+ }
+  
+  #id3{
+    left: 10%;
+    top: 41%;
+    width: 171px;
+    height: 248px;
+  }
+  
+  #id4{
+    top: 8%;
+    left: 42%;
+    width: 300px;
+    height: 200px;
+    font-size: 400%;
+  }
+  
+  #gsamaaj{
+    top: 79%;
+  }
+  
+  #id5{
+    top: 73%;
+    right: 4%;
+  }
+  
+  #id5 .play{
+    top: 10%;
+    padding: 14px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+  
+  
+}
+
+@media all and (max-width: 420px){
+  #id1 img {
+    width: 410px;
+    height: 230px;
+  }
+  
+  #id2 img{
+    width: 65px;
+    height: 33px;
+    top: 24%;
+    left: 9%;
+  }
+  
+  #id3{
+    top: 40%;
+    left: 9%;
+    width: 82px;
+    height: 200px;
+  }
+  
+  #id3 p{
+    font-size: 56%;
+  }
+  
+  #gsamaaj{
+    top: 55%;
+  }
+  
+  #id4{
+    top: 27%;
+    left: 35%;
+    width: 180px;
+    height: 150px;
+    font-size: 140%;
+  }
+  
+  #id5{
+    top: 82%;
+    right: 4%;
+  }
+  
+  #id5 .play{
+    padding: 7px 10px;
+    font-size: 7px;
+    border-radius: 6px;
+  }
 }
