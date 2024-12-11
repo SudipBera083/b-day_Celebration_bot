@@ -14,7 +14,7 @@ let checkUsers = (user, pass)=>
                 localStorage.setItem("username",user);
                 localStorage.setItem("id",data.users[i].id);
                 localStorage.setItem("qid",1);
-                window.location.href ="./loader.html";
+                window.location.href ="../loader.html";
             }
             else{
                 alert("Invalid Credentials!");
