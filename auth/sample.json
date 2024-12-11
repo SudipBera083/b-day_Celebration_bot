@@ -6,7 +6,7 @@
     "answer":[{
         "yes":"It's seems you are Exicted now !. Let's check your memories." ,
         "no": "Oh no ! I am here to make your mood better. Let's check your memories.",
-        "url":"../templates/memories.html"
+        "url":"../b-day_Celebration_bot/templates/memories.html"
     }]},
     {
         "qid":2,
@@ -14,7 +14,7 @@
         "answer":[{
             "yes":"Awesome ! Check the gifs made for you." ,
             "no": "Looks you need more attractive things. Sudip always responsible to handle negative things. Let's check this.",
-            "url":"../templates/gift.html"
+            "url":"../b-day_Celebration_bot/templates/gift.html"
     }]},
     
     {
@@ -23,6 +23,6 @@
         "answer":[{
             "yes":"Hurrah! Let's check this." ,
             "no": "Sudip will not be well, if you said like this. See this.",
-            "url":"../templates/surprise.html"
+            "url":"../b-day_Celebration_bot/templates/surprise.html"
     }]}
 ]
