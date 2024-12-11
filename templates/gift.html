@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Srijita</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #ffcccb, #ffe4e1);
+            color: #333;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            font-family: 'Great Vibes', cursive;
+            color: #d45d79;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #d0456d;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .play-btn {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            background: #f05454;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            background: #c70039;
+            transform: translateY(-3px);
+        }
+
+        #hBT {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e63946;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            animation: colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff6b6b; }
+            50% { color: #d45d79; }
+            100% { color: #e63946; }
+        }
+
+        @media (max-width: 768px) {
+            .message {
+                font-size: 1.2rem;
+            }
+
+            #hBT {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .play-btn {
+                font-size: 1rem;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <img src="../src/img/about.jpg" alt="Birthday Image">
+    <h1 id="hBT">Happy Birthday, Srijita!</h1>
+    <p class="message">
+        <span class="highlight">Happy Birthday, gorgeous!</span> If beauty were a crime, you’d have been locked up ages ago. Lucky for me, I’ve got a lifetime sentence with you!<br>
+        <span class="highlight">- Sudip</span>
+    </p>
+    <button class="play-btn" id="playAudio">Play</button>
+</div>
+
+<audio id="birthdayAudio">
+    <source src="../src/music/voice.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    const playBtn = document.getElementById('playAudio');
+    const audio = document.getElementById('birthdayAudio');
+
+    playBtn.addEventListener('click', () => {
+        audio.play();
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>

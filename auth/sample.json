@@ -1,0 +1,28 @@
+[
+    
+    {
+    "qid":1,
+    "question":"How are you feeling today ?",
+    "answer":[{
+        "yes":"It's seems you are Exicted now !. Let's check your memories." ,
+        "no": "Oh no ! I am here to make your mood better. Let's check your memories.",
+        "url":"../templates/memories.html"
+    }]},
+    {
+        "qid":2,
+        "question":"Are you felling better ?",
+        "answer":[{
+            "yes":"Awesome ! Check the gifs made for you." ,
+            "no": "Looks you need more attractive things. Sudip always responsible to handle negative things. Let's check this.",
+            "url":"../templates/gift.html"
+    }]},
+    
+    {
+        "qid":3,
+        "question":"Happy. right ?",
+        "answer":[{
+            "yes":"Hurrah! Let's check this." ,
+            "no": "Sudip will not be well, if you said like this. See this.",
+            "url":"../templates/surprise.html"
+    }]}
+]

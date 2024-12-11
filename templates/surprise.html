@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Happy B'day: Sriji</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+:root {
+  --heart-icon-color: #ff6058;
+  --heart-icon-size: 7vw;
+}
+body {
+  background: white;
+  background-image: url("https://st2.depositphotos.com/1002927/7601/v/950/depositphotos_76018329-stock-illustration-colored-balloons-left-side-cover.jpg");
+	background-attachment: cover;
+	background-position: fixed;
+	background-repeat: no-repeat;
+	
+}
+
+#card-front {
+  color: #FFDFDF;
+}
+
+#card, #card-front, #card-inside {
+  height: 480px;
+}
+
+.wrap {
+    padding: 0em 0em;
+    height: 100%;
+}
+#card-front, #card-inside {
+  width: 50%;
+	height: 90%;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  position: absolute;
+  left: 50%;
+	right: 10%;
+}
+
+
+#card-inside .wrap {
+    background: #FFEFEF;
+    -webkit-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+}
+#card {
+    max-width: 980px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    perspective: 5000px;
+    -moz-perspective: 5000px;
+    -webkit-perspective: 5000px;
+    position: relative;
+}
+
+#card h1 {
+    text-align: center;
+    font-family: 'Nobile', sans-serif;
+    font-style: italic;
+    font-size: 6vh;
+    text-shadow: 
+        4px 4px 0px rgba(0, 0, 0, .15),
+        1px 1px 0 rgba(255, 200, 200, 255),
+        2px 2px 0 rgba(255, 150, 150, 255),
+        3px 3px 0 rgba(255, 125, 125, 255);
+    color: #FFF;
+}
+#card-inside {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Nobile';
+    color: #331717;
+    font-style: italic;
+}
+.text{
+	font-size: 0.9em;
+}
+@media(max-width: 470px){
+	.text{
+		font-size: 0.7em;
+		margin: 0;
+	}
+}
+.text:first-child {
+    margin-top: 0;
+}
+
+#card-front {
+    background-color: #FF5555¥;
+    background-image: linear-gradient(top, #FF5555 0%, lightsteelblue 100%);
+    background-image: -moz-linear-gradient(top, #ED4567 0%, lightsteelblue 100%);
+    background-image: -webkit-linear-gradient(top, #ED4567 0%, lightsteelblue 100%);
+            transform-origin: left;
+       -moz-transform-origin: left;
+    -webkit-transform-origin: left;
+            transition:         transform 1s linear;
+       -moz-transition:    -moz-transform 1s linear;
+    -webkit-transition: -webkit-transform 1s linear;
+    position: relative;
+	border:5px solid white;
+	animation: mymove 5s infinite;
+}
+@keyframes mymove {
+    from {border: 10px solid red;}
+    to {border: 15px solid lightsteelblue;}
+}
+
+#card-front .wrap {
+            transition: background 1s linear;
+       -moz-transition: background 1s linear;
+    -webkit-transition: background 1s linear;
+}
+
+#card-front button {
+  position: absolute;
+  bottom: 1em;
+  right: -12px;
+  background: red;
+  color: #FFF;
+  font-family: 'Nobile', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: .5em;
+  border: none;
+  cursor: pointer;
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+     -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+}
+
+#card-front button:hover,
+#card-front button:focus {
+  background: #F22;
+}
+
+#close {
+  display: none;
+}
+
+#card.open-fully #close,
+#card-open-half #close {
+  display: inline;
+}
+
+#card.open-fully #open {
+  display: none;
+}
+
+
+#card.open-half #card-front,
+#card.close-half #card-front {
+            transform: rotateY(-90deg);
+       -moz-transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+}
+#card.open-half #card-front .wrap {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#card.open-fully #card-front,
+#card.close-half #card-front {
+  background: #FFEFEF;
+}
+
+#card.open-fully #card-front {
+    transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+#card.open-fully #card-front .wrap {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#card.open-fully #card-front .wrap *,
+#card.close-half #card-front .wrap * {
+   display: none;
+}
+
+footer {
+  max-width: 00px;
+  margin: 40px auto;
+  font-family: 'Nobile', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #888;
+  text-align: center;
+}
+
+/* creating heart*/
+@keyframes heartbeat {
+  to {
+    transform: scaleX(1.4) scaleY(1.3) rotate(-45deg);
+  }
+}
+.heart-icon:hover {
+  animation-duration: 0.2s;
+}
+.heart-icon {
+  background-color: var(--heart-icon-color);
+  height: var(--heart-icon-size);
+	margin-left: 40%;
+	margin-top: 4rem;
+  width: var(--heart-icon-size);
+  transform: rotate(-45deg);
+  animation: heartbeat 1s alternate infinite;
+}
+
+.heart-icon:after {
+  background-color: inherit;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: var(--heart-icon-size);
+  height: var(--heart-icon-size);
+  top: 0;
+  left: calc(var(--heart-icon-size)/2);
+}
+.heart-icon:before {
+  content: "";
+  background-color: inherit;
+  border-radius: 50%;
+  position: absolute;
+  width: var(--heart-icon-size);
+  height: var(--heart-icon-size);
+  top: calc(var(--heart-icon-size)/-2);
+  left: 0;
+}
+    </style>
+  </head>
+  <body>
+
+    <div id="card">
+        <div id="card-inside">
+          <div class="wrap">
+                   <div class="text">
+        <pre>
+          <style style="display: inline-block;" class="code" contenteditable>
+          </style>
+        </pre>
+      </div>         
+          </div>
+        </div>
+    
+        <div id="card-front">
+          <div class="wrap">
+            <h1>Happy Birthday!</h1>
+                     <div class="heart-icon"></div>
+          </div>
+          <button id="open">&gt;</button>
+          <button id="close">&lt;</button>
+        </div>
+      </div>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <script>
+        (function() {
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  var card = $('card'),
+      openB = $('open'),
+      closeB = $('close'),
+      timer = null;
+  console.log('wat', card);
+  openB.addEventListener('click', function () {
+    card.setAttribute('class', 'open-half');
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', 'open-fully');
+      timer = null;
+    }, 1000);
+  });
+
+  closeB.addEventListener('click', function () {
+    card.setAttribute('class', 'close-half');
+    if (timer) clearTimerout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', '');
+      timer = null;
+    }, 1000);
+  });
+
+}());
+
+
+
+const style = document.querySelector(".text pre style");
+const card = document.querySelector(".front face back face");
+
+
+script = `
+   .....
+Hey Srijita!
+  Another year older? 
+Well, you just keep getting hotter with time!
+Happy Birthday 
+to the love of my life.
+
+but the main thing is 
+I’m so lucky 
+to have you in my world.
+ ..........
+              Yours forever,
+              Sudip
+`;
+
+
+let counter = 0;
+
+let intervalID = setInterval(() => {
+  counter++;
+  style.textContent = script.substring(0, counter);
+  style.scrollTop = style.scrollHeight;
+  if(counter > script.length) {
+    clearInterval(intervalID);
+  }
+}, 90);
+    </script>
+    
+  </body>
+</html>
